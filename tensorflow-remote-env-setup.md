@@ -72,3 +72,4 @@ ssh root@[host-ip/0.0.0.0] -p 8022 #测试ssh能否登入container
 ##### extra notes
 - 监控gpu使用情况：watch -n 5 nvida-smi
 - 监控cpu/memery使用情况：top
+- 如果images不是long running的，使用tail -f /dev/null来保持进程
