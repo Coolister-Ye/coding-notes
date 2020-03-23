@@ -52,7 +52,7 @@ noets：
 ```
 mkdir /var/run/sshd
 echo 'root:passwd-xxx' | chpasswd #修改ssh密码
-sed -i 'PermitRootLogin prohibit-password/PermitRootLogin yes' /etc/ssh/sshd_config #修改ssh配置
+sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config #修改ssh配置
 
 service ssh restart #重启服务
 ```
