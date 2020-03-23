@@ -47,6 +47,7 @@ noets：
 - 这里要注意一下镜像cuda的版本
 - 8888端口是tensorflow jupyter notebook
 - 22端口是ssh服务
+- 退出时不要ctrl+c/ctrl+z/exits退出，会导致container关闭，直接关闭窗口即可
 
 4. 在镜像内进行ssh-server配置
 ```
@@ -67,3 +68,7 @@ ssh root@[host-ip/0.0.0.0] -p 8022 #测试ssh能否登入container
 - Pycharm Tools > Deployment > Configuration, 新建SFTP服务器
 - 点击TEST测试能否链接成功
 - File > Setting > Project > Project Interpreter, 新建SSH Interpreter
+
+##### extra notes
+- 监控gpu使用情况：watch -n 5 nvida-smi
+- 监控cpu/memery使用情况：top
