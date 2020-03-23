@@ -37,8 +37,10 @@ docker run \
     -v /remote dir:/container dir \
     -p 8822:22 \ 
     -p 8888:8888 \
-    -name dockerName \
+    -name="dockerName" \
     dockerImageId bash
+    
+docker run --rm -ti -v $pwd:/app -p 8822:22 -p 8888:8888 --name="deploy_tensor" cb4d7ac68d16 bash
 ```
 
 noets：
