@@ -40,7 +40,7 @@ docker run \
     -name="dockerName" \
     dockerImageId bash
     
-docker run --rm -ti -v $pwd:/app -p 8822:22 -p 8888:8888 --name="deploy_tensor" cb4d7ac68d16 bash
+docker run --rm -ti -v $pwd:/app -p 8822:22 -p 8888:8888 --name="deploy_tensor" cb4d7ac68d16
 ```
 
 noets：
@@ -67,9 +67,10 @@ ssh root@[host-ip/0.0.0.0] -p 8022 #测试ssh能否登入container
 6. 配置pycharm
 - Pycharm Tools > Deployment > Configuration, 新建SFTP服务器
 - 点击TEST测试能否链接成功
-- File > Setting > Project > Project Interpreter, 新建SSH Interpreter
+- File > Setting > Project > Project Interpreter, 新建SSH Interpreter (新版本在Preference里面)
 
 ##### extra notes
 - 监控gpu使用情况：watch -n 5 nvida-smi
 - 监控cpu/memery使用情况：top
 - 如果images不是long running的，使用tail -f /dev/null来保持进程
+- 需要绑定server端python，使用which python来查看路径
