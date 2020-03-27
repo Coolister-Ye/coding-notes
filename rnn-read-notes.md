@@ -26,3 +26,6 @@ back-propogation
 <img src="/images/ss-02.png" width="500">
 
 - 处于时间t的hidden对t时间的output的error有关，也和t+1 output的error有关
+- 计算gradient
+
+<img src="/images/ss-03.jpg" width="500">
