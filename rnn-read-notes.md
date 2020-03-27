@@ -14,5 +14,15 @@ notes：
 最简单的RNN模型，
 - 将上个timestamp的activation layer作为输入
 - 每次只是输入一个x
+- 需要学习更新的参数是W, U, V, 这3个变量是share cross时间
+  - W: input -> hidden
+  - U: hidden_t-1 -> hidden_t
+  - V: hidden -> y
 
-![RNN](/images/ss-01.png)
+<img src="/images/ss-01.png" width="500">
+
+back-propogation
+
+<img src="/images/ss-02.png" width="500">
+
+- 处于时间t的hidden对t时间的output的error有关，也和t+1 output的error有关
