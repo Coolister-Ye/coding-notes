@@ -51,6 +51,12 @@ docker run --runtime=nvidia -ti -p 8888:8888 -p 8822:22 -v $PWD:/app --name=dock
 docker run --runtime=nvidia -d imageId top
 ```
 
+5. To check you images can assess gpu, you can enter container and open python.
+```
+import tensorflow as tf
+tf.test.is_gpu_available()
+```
+
 ##### References
 - https://github.com/NVIDIA/nvidia-docker
 - https://hub.docker.com/r/nvidia/cuda
