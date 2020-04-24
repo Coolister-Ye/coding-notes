@@ -30,7 +30,7 @@ sudo nvidia-smi
 2. Build up your own docker images with Dockfile.
   - Change nvidia/cuda (nvidia/cuda:9.0-base)
   [Check Dockerfile Here](documents/Dockerfile)
-  - Build the images
+  - Build the images. Putting Dockerfile and bashrc in a new folder, then run the command as below.
   ```
   docker build -t cuda9-tf:v1 .
   ```
@@ -53,9 +53,10 @@ docker run --runtime=nvidia -d imageId top
 ```
 
 ##### References
-> https://github.com/NVIDIA/nvidia-docker
-https://hub.docker.com/r/nvidia/cuda
-https://hub.docker.com/r/tensorflow/tensorflow
-https://docs.nvidia.com/deploy/cuda-compatibility/index.html#binary-compatibility__table-toolkit-driver
-https://www.jianshu.com/p/622f47f94784
-https://www.jianshu.com/p/dfbb90995a2c
+> - https://github.com/NVIDIA/nvidia-docker
+- https://hub.docker.com/r/nvidia/cuda
+- https://hub.docker.com/r/tensorflow/tensorflow
+- https://docs.nvidia.com/deploy/cuda-compatibility/index.html#binary-compatibility__table-toolkit-driver
+- https://www.jianshu.com/p/622f47f94784
+- https://www.jianshu.com/p/dfbb90995a2c
+>
