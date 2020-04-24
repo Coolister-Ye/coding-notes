@@ -18,7 +18,7 @@ WORKDIR /app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
             vim \
-            cron \ 
+            cron \
             openssh-server \
     && rm -rf /var/lib/apt/lists/* \
     && pip install --no-cache-dir --default-timeout-100 -r requirements.txt
@@ -35,11 +35,11 @@ docker run \
     --rm \
     -ti \
     -v /remote dir:/container dir \
-    -p 8822:22 \ 
+    -p 8822:22 \
     -p 8888:8888 \
     -name="dockerName" \
     dockerImageId bash
-    
+
 docker run --rm -ti -v $pwd:/app -p 8822:22 -p 8888:8888 --name="deploy_tensor" cb4d7ac68d16
 ```
 
