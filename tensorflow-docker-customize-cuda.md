@@ -29,8 +29,7 @@ sudo nvidia-smi
 
 2. Build up your own docker images with Dockfile.
   - Change nvidia/cuda (nvidia/cuda:9.0-base)
-  [Check Dockerfile Here](documents/Dockerfile)
-  - Build the images. Putting Dockerfile and bashrc in a new folder, then run the command as below.
+  - Build the images. Putting [Dockerfile](documents/Dockerfile) and [bashrc](documents/bashrc) in a new folder, then run the command as below.
   ```
   docker build -t cuda9-tf:v1 .
   ```
