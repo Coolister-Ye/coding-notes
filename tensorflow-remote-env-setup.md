@@ -57,6 +57,13 @@ sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd
 
 service ssh restart #重启服务
 ```
+notes: 
+- debug-01: 有可能在用pycharm连服务器的时，ssh session可以启动，但在“TEST SFTP CONNECTION”的时候会一直loading状态，这时候可以试一下是否以下sftp设置原因造成：
+            - sftp -P 8822 root@0.0.0.0
+            - 输入密码进行登陆
+            - 提示`sftp Ensure the remote shell produces no output for non-interactive sessions.`错误
+            - 修改/etc/ssh/sshd_config中的Subsystem配置为`Subsystem sftp internal-sftp`
+            - 重启服务 `service ssh restart`
 
 5. 测试
 ```
