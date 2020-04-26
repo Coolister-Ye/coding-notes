@@ -59,12 +59,20 @@ service ssh restart #重启服务
 ```
 notes: 
 - debug-01: 有可能在用pycharm连服务器的时，ssh session可以启动，但在“TEST SFTP CONNECTION”的时候会一直loading状态，这时候可以试一下是否以下sftp设置原因造成：
+
 ```
 - sftp -P 8822 root@0.0.0.0
 - 输入密码进行登陆
 - 提示`sftp Ensure the remote shell produces no output for non-interactive sessions.`错误
 - 修改/etc/ssh/sshd_config中的Subsystem配置为`Subsystem sftp internal-sftp`
 - 重启服务 `service ssh restart`
+```
+
+- debug-02: 上传镜像的时候，可能会频繁更改port配置，有可能出现`ECDSA host key "ip-address" for has changed and you have requested strict checking`错误
+
+```
+ssh-keygen -R "你的远程服务器ip地址"
+eg. ssh-keygen -R [0.0.0.0]:8822
 ```
 
 5. 测试
