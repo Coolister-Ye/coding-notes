@@ -3,7 +3,7 @@
 预测y的概率分布，当errors是normally distributed的时候，95%的预测y落在正负2个标准差内，
 99.8%的预测y落在正负3个标准层内
 
-$$ \hat{y}_{T+h|T} \pm c\hat{\sigma_{h}} $$
+$$ \hat{y_{T+h|T}} \pm c\hat{\sigma_{h}} $$
 
 ## One-step prediction Interval
 
