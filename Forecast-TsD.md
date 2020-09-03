@@ -16,7 +16,7 @@ adjusted data
 
 ## Moving average smoothing (estimate trend)
 
-$$ \hat{T_{t}} $$
+$$ \hat{T_{t}} = \frac{1}{m} $$
 
 $$ \hat{T}_{t} = \frac{1}{m} \sum_{j=-k}^k y_{t+j} $$ 
 
