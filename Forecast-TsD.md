@@ -23,7 +23,7 @@ where m=2k+1
 ## Moving averages of moving averages
 
 主要的原因是让even-order（偶数）的moving avergae变得synmmetric（对称）
-一般常见的组合为2*4-MA, 3*3-MA, 偶数*偶数-MA，奇数*奇数-MA
+一般常见的组合为2 * 4-MA, 3 * 3-MA, 偶数 * 偶数-MA，奇数 * 奇数-MA
 
 ## Esitmating the trend with seasonal data
 
