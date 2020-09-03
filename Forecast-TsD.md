@@ -16,9 +16,7 @@ adjusted data
 
 ## Moving average smoothing (estimate trend)
 
-$$ \hat{T_{t}} = \frac{1}{m} \sum_{j=-k}^k y_{t+j}$$
-
-$$ \hat{T}_{t} = \frac{1}{m} \sum_{j=-k}^k y_{t+j} $$ 
+$$ \hat{T_{t}} = \frac{1}{m} \sum_{j=-k}^k y_{t+j} $$
 
 where m=2k+1
 
@@ -33,7 +31,7 @@ centred moving averages主要的作用是消除seasonal的影响，estimate tren
 
 对于2*4-MA
 
-$$ \hat{T}_{t} = \frac{1}{8}y_{t-2} + \frac14y_{t-1} +
+$$ \hat{T_{t}} = \frac{1}{8}y_{t-2} + \frac14y_{t-1} +
     \frac14y_{t} + \frac14y_{t+1} + \frac18y_{t+2} $$
 
 相当于每个季度赋予了相同的weight，可以消除大部分seasonal的影响。同理，2*8-MA和2*12-MA
