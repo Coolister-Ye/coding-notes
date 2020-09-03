@@ -34,10 +34,10 @@ centred moving averages主要的作用是消除seasonal的影响，estimate tren
 $$ \hat{T_{t}} = \frac{1}{8}y_{t-2} + \frac14y_{t-1} +
     \frac14y_{t} + \frac14y_{t+1} + \frac18y_{t+2} $$
 
-相当于每个季度赋予了相同的weight，可以消除大部分seasonal的影响。同理，2*8-MA和2*12-MA
+相当于每个季度赋予了相同的weight，可以消除大部分seasonal的影响。同理，2 * 8-MA和2 * 12-MA
 有相同的效果。
 
-对于，seasonal period是偶数的时候使用2*m-MA，seasonal period是奇数的时候使用m-MA
+对于，seasonal period是偶数的时候使用2 * m-MA，seasonal period是奇数的时候使用m-MA
 
 # Classical decomposition
 
