@@ -63,3 +63,21 @@ https://otexts.com/fpp2/classical-decomposition.html
 # STL decomposition
 
 Seasonal and Trend decomposition using Loess
+
+# Measuring strength of trend and seasonality
+
+Decomposition的结果可以用来衡量时间序列中trend和seasonality的强度
+当Trend的强度大的时候，seasonal adjusted数据中大部分的Variant都在trend中,即以下定义值接近1
+
+$$ F_T = \max\left(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(T_t+R_t)}\right) $$
+
+同理，可获得seasonality的强度定义如下：
+
+$$ F_S = \max\left(0, 1 - \frac{\text{Var}(R_t)}{\text{Var}(S_{t}+R_t)}\right) $$
+
+# Forecast with decomposition
+
+1. 先将时间序列进行decomposition, 分为S（seasonality），A=TR（Trend * Reminder）
+2. 分别预测S和A，预测S可以用naive method，直接是前1个周期的S
+3. 使用STL或者ARIMA预测A
+4. 2、3部分相加就是预测结果
