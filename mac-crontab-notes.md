@@ -14,7 +14,7 @@ Crontab命令
 ```
 logs报错
 ```
-/Library/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/01379863/Desktop/Project/57_auction_checker/web_service.py': [Errno 1] Operation not permitted
+/Library/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python: can't open file '/Users/me/Desktop/Project/57_auction_checker/web_service.py': [Errno 1] Operation not permitted
 ```
 解决方式
 1. 主要是文件系统权限的问题，想MAC下的Desktop，Document等这些文件夹都有权限限制
