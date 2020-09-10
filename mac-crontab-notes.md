@@ -1,11 +1,12 @@
 # 在MAC使用Crontab的可能遇到的问题
 
 Crontab是一个定时任务的工具，可以在mac上安装和使用
-https://www.runoob.com/linux/linux-comm-crontab.html
 
-在mac中使用Crontab可能会遇到一下问题，这里做个记录
+<https://www.runoob.com/linux/linux-comm-crontab.html>
 
-1. 使用crontab运行python定时任务
+在mac中使用Crontab可能会遇到以下问题，这里做个记录
+
+##### 使用crontab运行python定时任务
 
 Crontab命令
 ```
@@ -18,4 +19,4 @@ logs报错
 解决方式
 1. 主要是文件系统权限的问题，想MAC下的Desktop，Document等这些文件夹都有权限限制
 2. 可以把整个项目放到用户文件夹下的一个新建文件夹
-3. 网上还有另外一种方法，设置Security&Privacy下的Full Disk Access，将`/Library/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python`加进去，但这里我进不去Application的包，所以是通过方式2解决的
+3. 网上还有另外一种方法，设置Security&Privacy下的Full Disk Access，将`/Library/Frameworks/Python.framework/Versions/3.7/Resources/Python.app/Contents/MacOS/Python`加进去，但这里我进不去Application包里面，所以是通过方式2解决的
